@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Count</title>
+       
+    </head>
+    <body>
+        
+        <section>
+            <h1>There are {{count}} words in your text</h1>
+            <a href = "{% url 'home' %}"><input type="button" value="Start Again" ></a> 
+            <h2>Most used word is: {{most}}</h2>
+            <h1>Your text</h1>
+            <p>{{fulltext}}</p><br>
+            <h2>Counts of Words:</h2>
+            {% for word,num in words %}
+            {{word}} : {{num}}
+            <br>
+            {% endfor %}
+        </section>
+        
+    </body>
+</html>
